@@ -1,11 +1,12 @@
 # WorkControlAPI
-Classe de consumo de dados da API Work Control
+Classe de consumo de dados da API Work Control.
 
-<b>POST:: Exemplo de uso:</b>
-<code>
+> POST:: Exemplo de uso:
+
+```php
 <?php
-  require './WorkControlApi.class.php';
-  $getApi = new WorkControlApi("localhost/workcontrol", "www.upinside.com.br", "a87S6Aishakuhs");
+require 'WorkControlApi.class.php';
+$getApi = new WorkControlApi("LINK_DO_SITE", "API_KEY", "API_TOKEN");
   //$getPosts = $getApi->getPosts($Limit, $offset, $CategoryId, $Order, $By);
   $getPosts = $getApi->getPosts(3, null, null, 2);
   if ($getPosts):
@@ -18,4 +19,4 @@ Classe de consumo de dados da API Work Control
       echo $getApi->getError();
   endif;
 ?>
-</code>
+```
