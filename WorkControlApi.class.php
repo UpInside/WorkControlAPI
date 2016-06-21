@@ -35,7 +35,7 @@ class WorkControlApi {
      * @return INT Array com todos os dados para looping nativo!
      */
     public function getPosts($Limit = null, $offset = null, $CategoryId = null, $Order = null, $By = null) {
-        $this->cUrl = $this->Base . "/_api/post.php?key={$this->Key}&token={$this->Token}&limit={$Limit}&offser={$offset}&catid={$CategoryId}&order={$Order}&by={$By}";
+        $this->cUrl = $this->Base . "/_api/post.php?key={$this->Key}&token={$this->Token}&limit={$Limit}&offset={$offset}&catid={$CategoryId}&order={$Order}&by={$By}";
 
         $curl = curl_init($this->cUrl);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
